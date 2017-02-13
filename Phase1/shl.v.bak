@@ -1,0 +1,9 @@
+module shl (
+	input [31:0] A, amnt,
+	output reg [63:0] C);
+	always @(A, amnt)
+	begin
+		integer shift = amnt;
+		assign C = C << amnt;
+	end
+	
