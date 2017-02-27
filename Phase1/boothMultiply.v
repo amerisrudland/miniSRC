@@ -5,16 +5,15 @@ module boothMultiply(
 	begin
 		reg [31:0] Q;
 		Q[0] = 0 - A[0];
-		for (i=1; i < 32; i=i+1)
-			begin
+		for (i=1; i < 32; i=i+1) begin
 				Q[i] = A[i-1]-A[i];
-			end
+		end
 		
 		
 		//Make partial products
 		// temp register to hold a partial product
 		reg [63:0] temp;
-		product = 64'b0
+		product = 64'b0;
 		integer i;
 		for (i=0; i < 32; i=i+1)
 		begin
