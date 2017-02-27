@@ -19,4 +19,4 @@ module ALU (
 			11:		C = not(A); // is this a thing?
 			12:		C = ~A; // pretty sure this is negate
 			
-		
+endmodule
