@@ -25,4 +25,3 @@ module ALU (
 		zLo = C[31:0];
 	end
 endmodule
-		

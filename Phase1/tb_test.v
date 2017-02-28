@@ -22,7 +22,7 @@ begin
 		Reg_load3: 	presentState = T0;
 		T0:			presentState = T1;
 		T1:			presentState = T2;
-		T2: 		presentState = T3;
+		T2: 			presentState = T3;
 		T3:			presentState = T4;
 		T4:			presentState = T5;
 	endcase

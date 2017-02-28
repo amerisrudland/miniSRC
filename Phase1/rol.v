@@ -9,3 +9,4 @@ module rol(
 		C [(31-amnt-1):0] = A[31:amnt];
 		C [31:amnt] = temp;
 	end
+	endmodule
