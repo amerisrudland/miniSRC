@@ -22,7 +22,7 @@ module boothMultiply(
 			begin
 				temp = 64'b1; //negate for sign extend
 				temp[31:0] = -A;
-				temp = temp << i);
+				temp = temp << i;
 			end
 			else if (Q[i] == 0)
 				temp = 64'b0;
@@ -35,4 +35,4 @@ module boothMultiply(
 			product = product + temp;
 		end
 	end
-		
+		endmodule
