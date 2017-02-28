@@ -7,3 +7,4 @@ module shr (
 		integer shift = amnt;
 		C = C >> amnt;
 	end
+	endmodule

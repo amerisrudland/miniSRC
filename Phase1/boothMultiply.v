@@ -1,6 +1,10 @@
 module boothMultiply(
 	input [31:0] A,B,
 	output reg [63:0] product);
+	//Make partial products
+	// temp register to hold a partial product
+	reg [63:0] temp;
+	integer i;
 	always@ (A,B)
 	begin
 		reg [31:0] Q;
@@ -9,13 +13,7 @@ module boothMultiply(
 			begin
 				Q[i] = A[i-1]-A[i];
 			end
-		
-		
-		//Make partial products
-		// temp register to hold a partial product
-		reg [63:0] temp;
-		product = 64'b0
-		integer i;
+		product = 64'b0;
 		for (i=0; i < 32; i=i+1)
 		begin
 			if (Q[i] ==-1)
