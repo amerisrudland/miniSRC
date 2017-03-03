@@ -17,7 +17,7 @@
 // suit user's needs .Comments are provided in each section to help the user    
 // fill out necessary details.                                                  
 // *****************************************************************************
-// Generated on "03/03/2017 15:01:44"
+// Generated on "03/03/2017 15:44:51"
                                                                                 
 // Verilog Test Bench template for design : Phase1
 // 
@@ -28,14 +28,19 @@
 module Phase1_vlg_tst();
 // constants                                           
 // general purpose registers
-reg eachvec;
 // test vector input registers
+reg [31:0] c_sign_extended;
+reg clk;
+reg clr;
 reg Cout;
 reg [31:0] INPORTin;
 reg INPORTout;
+reg IR;
+reg MAR;
 reg [31:0] Mdatain;
-reg RMDR;
+reg OUTPORTin;
 reg [2:0] Rctl;
+reg read;
 reg Rin0;
 reg Rin1;
 reg Rin2;
@@ -58,21 +63,30 @@ reg RinPC;
 reg RinY;
 reg RinzHI;
 reg RinzLO;
-reg [31:0] c_sign_extended;
-reg clk;
-reg clr;
-reg read;
+reg RMDR;
 // wires                                               
+wire [31:0]  blah1;
+wire [31:0]  blah2;
+wire [31:0]  blah3;
 
 // assign statements (if any)                          
 Phase1 i1 (
 // port map - connection between master ports and signals/registers   
+	.blah1(blah1),
+	.blah2(blah2),
+	.blah3(blah3),
+	.c_sign_extended(c_sign_extended),
+	.clk(clk),
+	.clr(clr),
 	.Cout(Cout),
 	.INPORTin(INPORTin),
 	.INPORTout(INPORTout),
+	.IR(IR),
+	.MAR(MAR),
 	.Mdatain(Mdatain),
-	.RMDR(RMDR),
+	.OUTPORTin(OUTPORTin),
 	.Rctl(Rctl),
+	.read(read),
 	.Rin0(Rin0),
 	.Rin1(Rin1),
 	.Rin2(Rin2),
@@ -95,13 +109,12 @@ Phase1 i1 (
 	.RinY(RinY),
 	.RinzHI(RinzHI),
 	.RinzLO(RinzLO),
-	.c_sign_extended(c_sign_extended),
-	.clk(clk),
-	.clr(clr),
-	.read(read)
+	.RMDR(RMDR)
 );
-initial
-begin
+initial                                                
+begin                                                  
+// code that executes only once                        
+// insert code here --> begin  
 	assign Cout;
 	assign [31:0] INPORTin = 0;
 	assign INPORTout = 0;
@@ -133,22 +146,23 @@ begin
 	assign [31:0] c_sign_extended = 0;
 	assign clk = 0;
 	assign clr = 0;
-	assign read = 0;
+	assign read = 0;                        
 end
-always                                                
+always
 begin
 	assign clk = 1;
 	#10 	clk = !clk;
-	#10 	clk = !clk;
-end                                                  
-// code that executes only once                        
-// insert code here --> begin                          
-                                                       
+	#10 	clk = !clk;       
+end	
 // --> end                                             
 $display("Running testbench");                       
 end                                                    
-always@(posedge clk)
-begin
+always@(posedge clk)                                       
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+begin                                                  
+// code executes for every event on sensitivity list   
+// insert code here --> begin   
 	case (state)
 		Default:	presentState = Reg_load1;
 		Reg_load1:	presentState = Reg_load2;
@@ -161,9 +175,7 @@ begin
 		T4:			presentState = T5;
 	endcase
 end
-                                                 
-// optional sensitivity list                           
-// @(event1 or event2 or .... eventn)                  
+                       
 always @(presentState)
 begin
 	case(presentState)
@@ -186,7 +198,8 @@ begin
 				assign ADD_tb = 0;
 				
 			end
-	endcase
-end	
+	endcase                                                       
+// --> end                                             
+end                                                    
 endmodule
 
