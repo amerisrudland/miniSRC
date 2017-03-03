@@ -1,0 +1,192 @@
+// Copyright (C) 1991-2013 Altera Corporation
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, Altera MegaCore Function License 
+// Agreement, or other applicable license agreement, including, 
+// without limitation, that your use is for the sole purpose of 
+// programming logic devices manufactured by Altera and sold by 
+// Altera or its authorized distributors.  Please refer to the 
+// applicable agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench template that is freely editable to  
+// suit user's needs .Comments are provided in each section to help the user    
+// fill out necessary details.                                                  
+// *****************************************************************************
+// Generated on "03/03/2017 15:01:44"
+                                                                                
+// Verilog Test Bench template for design : Phase1
+// 
+// Simulation tool : ModelSim-Altera (Verilog)
+// 
+
+`timescale 1 ps/ 1 ps
+module Phase1_vlg_tst();
+// constants                                           
+// general purpose registers
+reg eachvec;
+// test vector input registers
+reg Cout;
+reg [31:0] INPORTin;
+reg INPORTout;
+reg [31:0] Mdatain;
+reg RMDR;
+reg [2:0] Rctl;
+reg Rin0;
+reg Rin1;
+reg Rin2;
+reg Rin3;
+reg Rin4;
+reg Rin5;
+reg Rin6;
+reg Rin7;
+reg Rin8;
+reg Rin9;
+reg RinA;
+reg RinB;
+reg RinC;
+reg RinD;
+reg RinE;
+reg RinF;
+reg RinHI;
+reg RinLO;
+reg RinPC;
+reg RinY;
+reg RinzHI;
+reg RinzLO;
+reg [31:0] c_sign_extended;
+reg clk;
+reg clr;
+reg read;
+// wires                                               
+
+// assign statements (if any)                          
+Phase1 i1 (
+// port map - connection between master ports and signals/registers   
+	.Cout(Cout),
+	.INPORTin(INPORTin),
+	.INPORTout(INPORTout),
+	.Mdatain(Mdatain),
+	.RMDR(RMDR),
+	.Rctl(Rctl),
+	.Rin0(Rin0),
+	.Rin1(Rin1),
+	.Rin2(Rin2),
+	.Rin3(Rin3),
+	.Rin4(Rin4),
+	.Rin5(Rin5),
+	.Rin6(Rin6),
+	.Rin7(Rin7),
+	.Rin8(Rin8),
+	.Rin9(Rin9),
+	.RinA(RinA),
+	.RinB(RinB),
+	.RinC(RinC),
+	.RinD(RinD),
+	.RinE(RinE),
+	.RinF(RinF),
+	.RinHI(RinHI),
+	.RinLO(RinLO),
+	.RinPC(RinPC),
+	.RinY(RinY),
+	.RinzHI(RinzHI),
+	.RinzLO(RinzLO),
+	.c_sign_extended(c_sign_extended),
+	.clk(clk),
+	.clr(clr),
+	.read(read)
+);
+initial
+begin
+	assign Cout;
+	assign [31:0] INPORTin = 0;
+	assign INPORTout = 0;
+	assign [31:0] Mdatain = 0;
+	assign RMDR = 0;
+	assign [2:0] Rctl = 0;
+	assign Rin0 = 0;
+	assign Rin1 = 0;
+	assign Rin2 = 0;
+	assign Rin3 = 0;
+	assign Rin4 = 0;
+	assign Rin5 = 0;
+	assign Rin6 = 0;
+	assign Rin7 = 0;
+	assign Rin8 = 0;
+	assign Rin9 = 0;
+	assign RinA = 0;
+	assign RinB = 0;
+	assign RinC = 0;
+	assign RinD = 0;
+	assign RinE = 0;
+	assign RinF = 0;
+	assign RinHI = 0;
+	assign RinLO = 0;
+	assign RinPC = 0;
+	assign RinY = 0;
+	assign RinzHI = 0;
+	assign RinzLO = 0;
+	assign [31:0] c_sign_extended = 0;
+	assign clk = 0;
+	assign clr = 0;
+	assign read = 0;
+end
+always                                                
+begin
+	assign clk = 1;
+	#10 	clk = !clk;
+	#10 	clk = !clk;
+end                                                  
+// code that executes only once                        
+// insert code here --> begin                          
+                                                       
+// --> end                                             
+$display("Running testbench");                       
+end                                                    
+always@(posedge clk)
+begin
+	case (state)
+		Default:	presentState = Reg_load1;
+		Reg_load1:	presentState = Reg_load2;
+		Reg_load2:	presentState = Reg_load3;
+		Reg_load3: 	presentState = T0;
+		T0:			presentState = T1;
+		T1:			presentState = T2;
+		T2: 			presentState = T3;
+		T3:			presentState = T4;
+		T4:			presentState = T5;
+	endcase
+end
+                                                 
+// optional sensitivity list                           
+// @(event1 or event2 or .... eventn)                  
+always @(presentState)
+begin
+	case(presentState)
+		Default:
+			begin
+				assign PCout_tb = 0;
+				assign Zlowout_tb = 0;
+				assign MDRout_tb = 0;
+				assign R2out_tb = 0;
+				assign R3out_tb = 0;
+				assign MARin_tb = 0;
+				assign Zin_tb = 0;
+				assign PCin_tb = 0;
+				assign MDRin_tb = 0;
+				assign IRin_tb = 0;
+				assign Yin_tb = 0;
+				assign R1in_b = 0;
+				assign IncPC_tb = 0;
+				assign Read_tb = 0;
+				assign ADD_tb = 0;
+				
+			end
+	endcase
+end	
+endmodule
+
