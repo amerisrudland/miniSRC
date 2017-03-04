@@ -264,7 +264,7 @@ begin
 				assign IR = 0;
 				assign Yin = 0;
 				assign Rin1 = 0;
-				//assign IncPC_tb = 0; ///////////////////////////////////////QUE????
+				//assign IncPC_tb = 0; ///unnecessary for phase 1
 				assign read = 0;
 				assign ctl = 0;
 				assign clr = 1;
@@ -328,7 +328,7 @@ begin
 			begin
 				assign PCout = 1;
 				assign MAR = 1;
-				//assign Inc_PC = 1;? QUE????????????????????????????????
+				//assign Inc_PC = 1;
 				assign RinZ =1;
 			end
 		T1:
@@ -348,7 +348,7 @@ begin
 		//t5
 				
 				//NOTES:
-				// HOW DO INC PC?
+				// All incPC is not needed for phase 1
 				// remember instead of ADD = 1, assign ctl = 01
 				// When finished:
 				// try compiling. Will probably need to
