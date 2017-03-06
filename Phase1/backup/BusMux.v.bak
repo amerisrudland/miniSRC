@@ -1,0 +1,8 @@
+`timescale 1ns/10ps
+module BusMux (
+	output 	[31:0] BusMuxOut,
+	input		[31:0] BuxMuxin-R0, BuxMuxin-R1, BuxMuxin-R2, BuxMuxin-R3, BuxMuxin-R4, BuxMuxin-R5, BuxMuxin-R6, BuxMuxin-R7, BuxMuxin-R8, BuxMuxin-R9, BuxMuxin-R10, BuxMuxin-R11, BuxMuxin-R12, BuxMuxin-R13, BuxMuxin-R14, BuxMuxin-R15, 
+	input 	[31:0] BuxMuxin-HI, BuxMuxin-LO, BuxMuxin-Zhi, BuxMuxin-Zlo, BuxMuxin-PC, BuxMuxin-MDR, BuxMuxin-In.Port, C_sign_extended,
+	input		[4:0] S
+	);
+	
